@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tour Plan Generator</title>
+</head>
+<body>
+    <h1>Tour Plan Generator</h1>
+    <form method="POST">
+        <label for="past_travel_info">Enter your past travel information:</label>
+        <textarea name="past_travel_info" rows="4" cols="50">{{ past_travel_info }}</textarea><br><br>
+        <input type="submit" value="Generate Tour Plan">
+    </form>
+    {% if tour_plan %}
+    <h2>Tour Plan:</h2>
+    <div id="tour-plan">{{ tour_plan }}</div>
+    {% endif %}
+</body>
+</html>
